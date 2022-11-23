@@ -1,0 +1,26 @@
+if game.Placeid == 2432005634 then
+
+  --load
+  local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+  --main
+  local Window = OrionLib:MakeWindow({Name = "Red HUB", HidePremium = false, SaveConfig = true, ConfigFolder = "Red", introEnabled = false})
+ 
+  --player
+  local jogadorTab = Window:MakeTab({
+	Name = "Jogador",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+local Section = jogadorTab:AddSection({
+	Name = "Auto-Farm"
+})
+jogadorTab:AddToggle({
+	Name = "Farm",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+  
+end
